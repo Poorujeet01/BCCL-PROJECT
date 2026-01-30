@@ -1,0 +1,298 @@
+body { 
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, #f0f4f9, #dbeafe);
+  color: #1e293b;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  background: #ffd700;
+  padding: 12px 20px;
+  border-bottom: 3px solid #1e40af;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+header h1 {
+  font-size: 1.6rem;
+  margin-left: 25px;
+  color: #1e40af;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.bccl-logo-placeholder {
+  height: 65px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Navbar */
+.bg-gradient-primary {
+  background: #1e40af;
+}
+
+/* Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding-left: 38px; /* space for icons */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-control:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Input icons */
+.input-group-text {
+  background: transparent;
+  border: none;
+  color: #475569;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-success {
+  background: #22c55e;
+  border: none;
+  color: white;
+}
+.btn-primary {
+  background: #1e40af;
+  border: none;
+  color: white;
+}
+.btn-warning {
+  background: #ffd700;
+  border: none;
+  color: black;
+  font-weight: 600;
+}
+.btn-info {
+  background: #0ea5e9;
+  border: none;
+  color: white;
+}
+.btn-yellow {
+  background: #ffd700;
+  border: none;
+  color: #1e40af;
+  font-weight: 600;
+}
+.btn-yellow:hover {
+  background: #ffed4e;
+  color: #1e40af;
+}
+
+/* Table / Lists */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9fafb;
+}
+.table-hover tbody tr:hover {
+  background-color: #e0f2fe;
+}
+
+/* Status */
+.status-confirmed { color: green; font-weight:600; }
+.status-pending { color: orange; font-weight:600; }
+.status-disputed { color: red; font-weight:600; }
+.small-muted { font-size:12px; color:#6c757d; }
+
+/* Payment Status Indicators */
+.border-success {
+  border-color: #22c55e !important;
+  border-width: 2px !important;
+}
+.border-danger {
+  border-color: #ef4444 !important;
+  border-width: 2px !important;
+}
+.border-primary {
+  border-color: #3b82f6 !important;
+  border-width: 2px !important;
+}
+
+/* Information Banner */
+.info-banner-container {
+  max-width: 100%;
+  position: relative;
+  margin: 30px auto;
+  background: #1e40af;
+  border: 3px solid #ffd700;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.info-slide {
+  display: none;
+  width: 100%;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+.info-slide.active-slide {
+  display: block;
+  animation: slideIn 1s ease-in-out;
+}
+
+.info-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.info-text {
+  text-align: left;
+}
+
+.info-text h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.info-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .info-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .info-text {
+    text-align: center;
+  }
+  .info-text h4 {
+    font-size: 1.5rem;
+  }
+  .info-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Progress bar */
+.progress {
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+/* Enhanced spacing and visual hierarchy */
+.card-body h6 {
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Worker dashboard styling */
+#workerDashboard .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Form enhancements */
+.form-select {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-select:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Footer */
+.bccl-footer {
+  background: #ffd700;
+  color: #1e40af;
+  border-top: 3px solid #1e40af;
+  margin-top: 40px;
+}
+.bccl-footer h6 {
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.bccl-footer small {
+  color: #1e40af;
+  opacity: 0.8;
+}
+.bccl-footer .fw-bold {
+  color: #1e40af;
+  font-size: 1.1rem;
+}
+
+/* Badge enhancements */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.5em 0.75em;
+}
+
+/* Responsive table */
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+}
